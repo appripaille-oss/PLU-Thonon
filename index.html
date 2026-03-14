@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zone UP/UR – Port Ripaille · Comparatif PLU AVANT / PLUi-HM 2026 · Thonon-les-Bains</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,600;0,8..60,700;1,8..60,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bleu:        #1a3a5c;
+    --bleu-moyen:  #2c5f8a;
+    --bleu-clair:  #e8f0f8;
+    --avant-bg:    #fdf3ee;
+    --avant-bord:  #c9703a;
+    --apres-bg:    #eef5ee;
+    --apres-bord:  #3a7a45;
+    --theme-bg:    #f0f5fa;
+    --theme-bord:  #2c5f8a;
+    --sujet-bg:    #f7f9fc;
+    --texte:       #1e2b38;
+    --gris:        #5a6a7a;
+    --ligne:       #dce6ef;
+    --font-titre:  'Source Serif 4', Georgia, serif;
+    --font-corps:  'DM Sans', system-ui, sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: var(--font-corps);
+    color: var(--texte);
+    background: #f4f7fb;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  header {
+    background: var(--bleu);
+    color: #fff;
+    padding: 48px 40px 36px;
+    position: relative;
+    overflow: hidden;
+  }
+  header::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #c9703a 0%, #3a7a45 100%);
+  }
+  .header-eyebrow {
+    font-family: var(--font-corps);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: #a8c4df;
+    margin-bottom: 12px;
+  }
+  header h1 {
+    font-family: var(--font-titre);
+    font-size: clamp(22px, 4vw, 34px);
+    font-weight: 600;
+    line-height: 1.25;
+    margin-bottom: 10px;
+  }
+  header p.sous-titre {
+    font-size: 15px;
+    color: #ccdcec;
+    max-width: 680px;
+  }
+  .badge-row {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+  }
+  .badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px 6px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .badge-avant { background: rgba(201,112,58,.18); border: 1px solid rgba(201,112,58,.4); color: #f4c09a; }
+  .badge-apres { background: rgba(58,122,69,.18);  border: 1px solid rgba(58,122,69,.4);  color: #8ecf96; }
+  .badge::before { content: ''; width: 10px; height: 10px; border-radius: 2px; flex-shrink: 0; }
+  .badge-avant::before { background: #c9703a; }
+  .badge-apres::before { background: #3a7a45; }
+
+  nav.themes {
+    background: var(--bleu-moyen);
+    padding: 14px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,.18);
+  }
+  nav.themes a {
+    color: #b8d4ec;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: color .15s;
+  }
+  nav.themes a:hover { color: #fff; }
+
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 36px 20px 60px;
+  }
+
+  .note-info {
+    background: var(--bleu-clair);
+    border-left: 4px solid var(--bleu-moyen);
+    padding: 14px 18px;
+    border-radius: 0 6px 6px 0;
+    margin-bottom: 32px;
+    font-size: 13.5px;
+    color: var(--gris);
+    line-height: 1.55;
+  }
+  .note-info strong { color: var(--bleu); }
+
+  .note-zone {
+    background: #fff8e1;
+    border-left: 4px solid #f59e0b;
+    padding: 12px 18px;
+    border-radius: 0 6px 6px 0;
+    margin-bottom: 24px;
+    font-size: 13px;
+    color: #5c4a1a;
+  }
+
+  .theme-section {
+    margin-bottom: 48px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 6px rgba(26,58,92,.10);
+  }
+  .theme-header {
+    background: var(--theme-bg);
+    border-left: 5px solid var(--theme-bord);
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .theme-num {
+    background: var(--bleu);
+    color: #fff;
+    font-weight: 700;
+    font-size: 12px;
+    width: 26px; height: 26px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .theme-header h2 {
+    font-family: var(--font-titre);
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--bleu);
+    letter-spacing: .01em;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+  }
+  thead th {
+    background: var(--bleu);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+    padding: 10px 14px;
+    text-align: left;
+    border-right: 1px solid rgba(255,255,255,.12);
+  }
+  thead th:first-child { width: 22%; }
+  thead th:nth-child(2),
+  thead th:nth-child(3) { width: 39%; }
+
+  tbody tr { border-bottom: 1px solid var(--ligne); }
+  tbody tr:last-child { border-bottom: none; }
+  tbody tr:hover td { filter: brightness(.97); }
+
+  td {
+    padding: 13px 14px;
+    vertical-align: top;
+    font-size: 13.5px;
+    line-height: 1.55;
+    border-right: 1px solid var(--ligne);
+  }
+  td:last-child { border-right: none; }
+
+  .td-sujet {
+    background: var(--sujet-bg);
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--bleu);
+    width: 22%;
+  }
+  .td-avant {
+    background: var(--avant-bg);
+    border-left: 3px solid var(--avant-bord);
+    width: 39%;
+  }
+  .td-apres {
+    background: var(--apres-bg);
+    border-left: 3px solid var(--apres-bord);
+    width: 39%;
+  }
+
+  .tag {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    padding: 2px 7px;
+    border-radius: 3px;
+    margin-bottom: 4px;
+    vertical-align: middle;
+  }
+  .tag-new     { background: #d4edda; color: #1c5e2c; }
+  .tag-sup     { background: #fde8e8; color: #8b1a1a; }
+  .tag-change  { background: #fff3cd; color: #7a5700; }
+  .tag-same    { background: #e9ecef; color: #495057; }
+
+  .avertissement {
+    margin-top: 48px;
+    border: 1px solid #d4a76a;
+    background: #fef9f2;
+    border-radius: 6px;
+    padding: 18px 22px;
+    font-size: 13px;
+    color: #5c4a2a;
+    line-height: 1.6;
+  }
+  .avertissement strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #7a4e12;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: .06em;
+  }
+
+  footer {
+    text-align: center;
+    padding: 24px;
+    font-size: 12px;
+    color: #8a9bb0;
+    border-top: 1px solid var(--ligne);
+    margin-top: 20px;
+  }
+
+  @media print {
+    nav.themes { display: none; }
+    header { padding: 24px; }
+    main { padding: 16px; max-width: 100%; }
+    .theme-section { box-shadow: none; margin-bottom: 28px; break-inside: avoid; }
+    body { font-size: 11px; background: #fff; }
+    td { font-size: 11px; padding: 8px 10px; }
+    thead th { font-size: 10px; }
+  }
+
+  @media (max-width: 700px) {
+    header { padding: 28px 18px; }
+    nav.themes { padding: 10px 18px; }
+    table { display: block; overflow-x: auto; }
+    td, thead th { font-size: 12px; padding: 9px 10px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-eyebrow">Plan Local d'Urbanisme Intercommunal · Thonon-les-Bains</div>
+  <h1>Zone UP/UR — Port Ripaille (Marina)<br>Comparatif réglementaire</h1>
+  <p class="sous-titre">Synthèse des évolutions entre l'ancien PLU de Thonon-les-Bains (zone UP, révisé 2013, modifié 2019) et le nouveau PLUi-HM approuvé (zone UR, 2026). Document établi à l'intention des résidents et copropriétaires.</p>
+  <div class="badge-row">
+    <span class="badge badge-avant">PLU AVANT — Zone UP (2013/2019)</span>
+    <span class="badge badge-apres">PLUi-HM 2026 — Zone UR</span>
+  </div>
+</header>
+
+<nav class="themes">
+  <a href="#t1">1. Destinations</a>
+  <a href="#t2">2. Hauteur</a>
+  <a href="#t3">3. Implantation</a>
+  <a href="#t4">4. Façades</a>
+  <a href="#t5">5. Percements</a>
+  <a href="#t6">6. Vérandas</a>
+  <a href="#t7">7. Toitures</a>
+  <a href="#t8">8. Éléments techniques</a>
+  <a href="#t9">9. Annexes</a>
+  <a href="#t10">10. Clôtures</a>
+  <a href="#t11">11. Espaces libres</a>
+  <a href="#t12">12. Stationnement</a>
+  <a href="#t13">13. Réseaux</a>
+  <a href="#t14">14. Énergie</a>
+</nav>
+
+<main>
+
+  <div class="note-info">
+    <strong>Comment lire ce tableau ?</strong> Chaque ligne présente un point réglementaire. Le fond <span style="color:#b85c1a;font-weight:600">saumon</span> correspond à l'ancienne règle (zone UP) ; le fond <span style="color:#2d6b36;font-weight:600">vert</span> à la nouvelle règle (zone UR). Les étiquettes <span class="tag tag-new">Nouveau</span> <span class="tag tag-change">Modifié</span> <span class="tag tag-same">Inchangé</span> <span class="tag tag-sup">Supprimé/Interdit</span> signalent la nature du changement. Ce document est informatif ; seul le règlement officiel approuvé fait foi.
+  </div>
+
+  <div class="note-zone">
+    <strong>⚠ Changement de dénomination :</strong> La zone s'appelait <strong>UP</strong> dans l'ancien PLU de Thonon-les-Bains. Elle est rebaptisée <strong>UR</strong> dans le nouveau PLUi-HM (Plan Local d'Urbanisme intercommunal Habitat et Mobilités) de Thonon Agglomération. Les règles s'appliquent toujours à la marina de Port Ripaille, avec des dispositions spécifiques pour la <strong>presqu'île Le Pré aux Saules</strong> (zones A et B).
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <!-- 1. DESTINATIONS -->
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <section class="theme-section" id="t1">
+    <div class="theme-header">
+      <div class="theme-num">1</div>
+      <h2>Destinations autorisées et interdites</h2>
+    </div>
+    <table>
+      <thead><tr>
+        <th>Point réglementaire</th>
+        <th>PLU AVANT — Zone UP (2013/2019)</th>
+        <th>PLUi-HM 2026 — Zone UR</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td class="td-sujet">Logement</td>
+          <td class="td-avant">Autorisé. Extensions, rénovations et travaux d'amélioration admis sous conditions architecturales.</td>
+          <td class="td-apres"><span class="tag tag-change">Modifié</span><br>Autorisé. <strong>Piscines proscrites. Nouvelles caves proscrites.</strong> Pour les constructions préexistantes non autorisées : mise aux normes, réhabilitation, extension limitée à 30 % de la surface de plancher, annexes limitées à 40 m².</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Commerce, restauration, hôtels, hébergements touristiques, cinéma</td>
+          <td class="td-avant">Non réglementés explicitement en tant que destinations. ICPE admises sous conditions si utiles à la vie du quartier.</td>
+          <td class="td-apres"><span class="tag tag-sup">Interdit</span><br>Artisanat/commerce de détail, restauration, commerce de gros, services avec accueil de clientèle, hôtels, hébergements touristiques, cinéma : tous <strong>interdits</strong>.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Équipements publics et d'intérêt collectif — locaux administratifs</td>
+          <td class="td-avant">Admis si utiles au quartier et compatibles avec la vocation résidentielle.</td>
+          <td class="td-apres"><span class="tag tag-sup">Interdit</span><br>Locaux et bureaux accueillant du public des administrations publiques : <strong>interdits</strong>.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Équipements publics — locaux techniques</td>
+          <td class="td-avant">Admis sous conditions.</td>
+          <td class="td-apres"><span class="tag tag-change">Modifié</span><br>Autorisés sous conditions strictes : implantation justifiée par impératifs techniques, sans atteinte à la vocation principale de la zone, avec mesures de limitation des nuisances.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Équipements publics — enseignement, santé, sport, culte…</td>
+          <td class="td-avant">Non précisé.</td>
+          <td class="td-apres"><span class="tag tag-sup">Interdit</span><br>Établissements d'enseignement, de santé, salles d'art, équipements sportifs, lieux de culte, autres équipements recevant du public : tous <strong>interdits</strong>.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Exploitation agricole et forestière</td>
+          <td class="td-avant">Bâtiments agricoles interdits.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Exploitation agricole et forestière : <strong>interdites</strong>.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Bureaux, industrie, entrepôts</td>
+          <td class="td-avant">Non réglementés explicitement.</td>
+          <td class="td-apres"><span class="tag tag-sup">Interdit</span><br>Industrie, entrepôts, bureaux, salles de congrès, cuisines dédiées à la vente en ligne : tous <strong>interdits</strong>.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">ICPE soumises à déclaration/enregistrement</td>
+          <td class="td-avant">Autorisées si utiles à la vie du quartier, compatibles avec les milieux environnants et les infrastructures existantes.</td>
+          <td class="td-apres"><span class="tag tag-change">Modifié</span><br>Autorisées uniquement si rôle fondamental dans la vie quotidienne des habitants, sans incommodité ni insalubrité pour le voisinage, ni sinistre grave en cas d'accident.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">ICPE soumises à autorisation</td>
+          <td class="td-avant">Non précisé.</td>
+          <td class="td-apres"><span class="tag tag-sup">Interdit</span><br><strong>Interdites.</strong></td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Autres usages interdits (nouveaux)</td>
+          <td class="td-avant">Non précisés explicitement.</td>
+          <td class="td-apres"><span class="tag tag-new">Nouveau</span><br>Désormais explicitement interdits : dépôts/stockages non liés à une activité autorisée, affouillements/exhaussements non liés aux constructions, garages collectifs de caravanes, terrains de camping, parcs d'attraction, résidences démontables.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <!-- 2. HAUTEUR -->
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <section class="theme-section" id="t2">
+    <div class="theme-header">
+      <div class="theme-num">2</div>
+      <h2>Hauteur des constructions</h2>
+    </div>
+    <table>
+      <thead><tr><th>Point réglementaire</th><th>PLU AVANT — Zone UP</th><th>PLUi-HM 2026 — Zone UR</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="td-sujet">Maisons individuelles</td>
+          <td class="td-avant">9 m maximum (terrain naturel au point le plus haut, superstructures comprises).</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>9 m maximum. Référence : terrain naturel.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Immeubles collectifs</td>
+          <td class="td-avant">12 m maximum.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>12 m maximum.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Éléments inclus dans le calcul</td>
+          <td class="td-avant">Ascenseurs, ventilation, climatisation, panneaux solaires inclus. Antennes, cheminées, garde-corps exclus.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Vues remarquables</td>
+          <td class="td-avant">La hauteur devra être adaptée pour ne pas masquer les vues sur le grand paysage repérées comme remarquables.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Idem : la hauteur devra être adaptée pour ne pas masquer les vues remarquables sur le grand paysage.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Équipements publics</td>
+          <td class="td-avant">Dispositions particulières possibles si exigences fonctionnelles ou caractère emblématique.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique. Recherche d'insertion dans le tissu existant néanmoins requise.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Déblais / affouillements</td>
+          <td class="td-avant">Non précisé.</td>
+          <td class="td-apres"><span class="tag tag-new">Nouveau</span><br>Déblais/affouillements limités à <strong>1,50 m</strong> pour permettre la création d'un vide sanitaire.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Terrain naturel en marge de recul</td>
+          <td class="td-avant">Non précisé.</td>
+          <td class="td-apres"><span class="tag tag-new">Nouveau</span><br>Le terrain naturel ne doit pas être modifié sur une largeur d'au moins <strong>2 m</strong> par rapport aux limites séparatives (sauf contrainte topographique pour l'accès).</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <!-- 3. IMPLANTATION -->
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <section class="theme-section" id="t3">
+    <div class="theme-header">
+      <div class="theme-num">3</div>
+      <h2>Implantation des constructions</h2>
+    </div>
+    <table>
+      <thead><tr><th>Point réglementaire</th><th>PLU AVANT — Zone UP</th><th>PLUi-HM 2026 — Zone UR</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="td-sujet">Recul / lac Léman</td>
+          <td class="td-avant">25 m minimum par rapport aux plus hautes eaux du lac.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>25 m minimum par rapport au niveau des plus hautes eaux du lac Léman.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Constructions principales / voirie</td>
+          <td class="td-avant">Même retrait que les constructions avoisinantes comparables sur la même presqu'île.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Même retrait que les constructions avoisinantes comparables sur la même presqu'île.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Annexes de stationnement / voirie</td>
+          <td class="td-avant">Implantées à l'alignement de la voie. Si voie non perpendiculaire aux limites séparatives : implantation au minimum en un point en limite de voie.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Recul / limites séparatives</td>
+          <td class="td-avant">Constructions annexes et piscines pouvant s'implanter jusqu'à 0,75 m d'une limite séparative de lot (pour permettre une haie commune de 1,50 m).</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique : constructions annexes jusqu'à 0,75 m d'une limite séparative pour permettre la haie commune de 1,50 m.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Stationnement en zone A du Pré aux Saules</td>
+          <td class="td-avant">Surfaces de stationnement perméables obligatoires (pavés sur sable, dalles gazon). Enrobés et béton interdits. 1 seul emplacement couvert par lot.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <!-- 4. FAÇADES -->
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <section class="theme-section" id="t4">
+    <div class="theme-header">
+      <div class="theme-num">4</div>
+      <h2>Aspect extérieur — Façades</h2>
+    </div>
+    <table>
+      <thead><tr><th>Point réglementaire</th><th>PLU AVANT — Zone UP</th><th>PLUi-HM 2026 — Zone UR</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="td-sujet">Ravalement — teinte et granulométrie</td>
+          <td class="td-avant">Reproduction des caractéristiques du bâti d'origine (granulométrie et teinte de l'enduit). Bandeaux béton brut non peints ; ceux déjà peints devront retrouver leur aspect brut lors du prochain ravalement.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Isolation thermique par l'extérieur (ITE)</td>
+          <td class="td-avant">Autorisée dans la limite de <strong>20 cm</strong> de surépaisseur, en conservant l'aspect des façades d'origine (granulométrie, teinte). Le bandeau béton devra être retrouvé par un dispositif équivalent.</td>
+          <td class="td-apres"><span class="tag tag-sup">Supprimé</span><br>ITE <strong>proscrite</strong> dans le nouveau règlement.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Boiseries / lasures</td>
+          <td class="td-avant">Boiseries et clôtures traitées en lasures foncées : palissandre, noyer, chêne foncé, chêne rustique.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Volets roulants — coffret</td>
+          <td class="td-avant">Coffret d'enroulement intégré au gros œuvre. Coffrets apparents en façade proscrits.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique. Coffret d'enroulement à l'intérieur de la construction. Coffrets en placage sur nu de façade interdits.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Matériaux agrafés</td>
+          <td class="td-avant">Non précisé.</td>
+          <td class="td-apres"><span class="tag tag-new">Nouveau</span><br>Tous matériaux agrafés de type carrelage ou parements divers : <strong>interdits</strong>.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Portes (remplacement ou création)</td>
+          <td class="td-avant">Non précisé.</td>
+          <td class="td-apres"><span class="tag tag-new">Nouveau</span><br>Toute nouvelle porte sera en bois de teinte brun foncé (lames verticales toute hauteur) ou en aluminium entièrement vitré, profils fins, teinte brun foncé.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Nouvelles façades (extension/annexe en pignon)</td>
+          <td class="td-avant">Non précisé.</td>
+          <td class="td-apres"><span class="tag tag-new">Nouveau</span><br>Percement en pignon des nouvelles façades issues d'une extension/annexe : <strong>2 m de largeur × 0,60 m de hauteur</strong>.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Menuiseries — Pré aux Saules</td>
+          <td class="td-avant">Teinte blanche pour fenêtres et occultations repliables. Brun foncé pour occultations en bois et baies de garages.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique. Volets roulants en aluminium teinte blanche admis en remplacement des occultations repliables.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <!-- 5. PERCEMENTS -->
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <section class="theme-section" id="t5">
+    <div class="theme-header">
+      <div class="theme-num">5</div>
+      <h2>Percements</h2>
+    </div>
+    <table>
+      <thead><tr><th>Point réglementaire</th><th>PLU AVANT — Zone UP</th><th>PLUi-HM 2026 — Zone UR</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="td-sujet">Obturations de baies</td>
+          <td class="td-avant">Interdites sauf pour restituer les dimensions d'origine.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Nouveaux percements en pignon — RDC</td>
+          <td class="td-avant">3 formats autorisés : 1,40 m × 1,70 m (3 vantaux) ; 2,10 m × 0,90 m (1 vantail) ; 2,10 m × 1,70 m (3 vantaux).</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Nouveaux percements en pignon — étage</td>
+          <td class="td-avant">0,40 m de hauteur × 1,00 m de largeur.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Percements côté rue — RDC</td>
+          <td class="td-avant">Modification autorisée uniquement pour créer une véranda ou ajouter un volume pour une cuisine.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Percements côté rue — étage</td>
+          <td class="td-avant">La création d'un balcon ne donne pas lieu à modification des percements existants.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Percements côté canal — RDC</td>
+          <td class="td-avant">Agrandissement des percements autorisé.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Percements côté canal — étage</td>
+          <td class="td-avant">Modification non autorisée sauf en cas de création de balcon.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Pré aux Saules — pignons RDC</td>
+          <td class="td-avant">Percements 0,80 m × 0,90 m ou 0,90 m × 2,10 m.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Pré aux Saules — côté lac ou canal</td>
+          <td class="td-avant">Aucun nouveau percement autorisé en façade (RDC ou étage).</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <!-- 6. VÉRANDAS ET BALCONS -->
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <section class="theme-section" id="t6">
+    <div class="theme-header">
+      <div class="theme-num">6</div>
+      <h2>Vérandas, loggias, auvents et balcons</h2>
+    </div>
+    <table>
+      <thead><tr><th>Point réglementaire</th><th>PLU AVANT — Zone UP</th><th>PLUi-HM 2026 — Zone UR</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="td-sujet">Fermeture de balcons en étage — individuel</td>
+          <td class="td-avant">Interdite.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Interdite.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Véranda côté rue — individuel (hors Pré aux Saules)</td>
+          <td class="td-avant">Profondeur 1,25 m ou 2,50 m. Baie 4 vantaux vitrés ou 2 parties maçonnées + baie 3 vantaux. Menuiseries brun foncé. Couverture : balcon existant/créé ou toiture 1 pan entièrement vitrée.</td>
+          <td class="td-apres"><span class="tag tag-change">Modifié</span><br>Profondeur max 1,25 m ou 2,50 m. La véranda de 2,50 m n'est autorisée que si <strong>40 % de l'espace côté rue reste en pleine terre</strong>. Baie 4 vantaux. Porte latérale vitrée possible. Couverture : balcon existant/créé ou toiture 1 pan vitrée 4 panneaux. Alternative : volume avec ou sans balcon (profondeur max 1,25 m, baie tout linéaire de façade).</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Véranda côté canal — individuel (hors Pré aux Saules)</td>
+          <td class="td-avant">Profondeur max 2,50 m, baie 4 vantaux, porte latérale possible. Couverture selon présence d'un balcon simple ou double.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Pré aux Saules — zone A, côté rue</td>
+          <td class="td-avant">Fermeture de l'espace sous encorbellement ou création de véranda en façade : interdite.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Pré aux Saules — zone B, côté rue</td>
+          <td class="td-avant">Véranda en fermeture de terrasse couverte existante admise. Baie 4 ou 5 vantaux entièrement vitrés. Aucun débord de toiture autorisé.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique. Menuiseries teinte blanc ou brun foncé (précision nouvelle).</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Pré aux Saules — zone A, côté canal</td>
+          <td class="td-avant">Véranda en fermeture de terrasse couverte existante admise. Baie 4 ou 5 vantaux. Pas de débord de toiture.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Pré aux Saules — zone B, côté canal</td>
+          <td class="td-avant">Constructions en extension (véranda ou autre) : interdites.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Immeubles collectifs — côté rue</td>
+          <td class="td-avant">Excroissances (balcons, auvents, stores) interdites aux étages. Auvent limité à la largeur de la baie d'entrée admis, entièrement vitré.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Immeubles collectifs — côté canal</td>
+          <td class="td-avant">Fermeture des espaces couverts admise. Paroi coulissante 4 vantaux vitrés brun foncé. Dernier niveau : toiture entièrement vitrée ou prolongement de la toiture existante.</td>
+          <td class="td-apres"><span class="tag tag-change">Modifié</span><br>Identique. Précision ajoutée : <strong>un seul modèle de store-banne autorisé par immeuble.</strong></td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Garde-corps</td>
+          <td class="td-avant">Remplacement selon le modèle d'origine (formes, dimensions, teintes). Structure acier peint brun foncé, lisses bois ou similaire brun foncé.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Auvents</td>
+          <td class="td-avant">Interdits à l'étage et en pignon. Autorisés au-dessus de la porte d'accès, limités à la dimension de la baie, ne dépassant pas la dalle entre RDC et 1er étage. Couverture identique à la toiture ou entièrement vitrée.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <!-- 7. TOITURES -->
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <section class="theme-section" id="t7">
+    <div class="theme-header">
+      <div class="theme-num">7</div>
+      <h2>Toitures</h2>
+    </div>
+    <table>
+      <thead><tr><th>Point réglementaire</th><th>PLU AVANT — Zone UP</th><th>PLUi-HM 2026 — Zone UR</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="td-sujet">Type et matériaux</td>
+          <td class="td-avant">Deux pans, bardeaux bitumineux canadiens brun foncé, tuiles acier plates brun/marron, ou tavaillons bois. Pente 20°. Terrasses et surélévations interdites (sauf lucarnes autorisées).</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Réfection de toiture</td>
+          <td class="td-avant">Accordée uniquement si elle concerne l'ensemble du bâti accolé.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Châssis de toit</td>
+          <td class="td-avant">Alignés sur une même ligne horizontale par pan. Interdits sur les constructions annexes.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique. Précision : autorisés uniquement sur constructions principales et extensions accolées en pignon disposant d'une toiture à 2 pans asymétriques. Max 2 par pan pour les constructions principales, placés au plus près du faîtage. Pour les extensions : 1 seul châssis de 1 m² max sur le pan le plus long. Sur un pan avec chien-assis : installation d'un châssis interdite.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Lucarnes (chiens-assis) — zone générale</td>
+          <td class="td-avant">1 par pan, centré sur la panne faîtière. Dimensions : 3 m × 1,70 m. Baie 4 vantaux vitrés, sans coffre apparent. Couverture identique à la toiture, joues pleines. Surélévation modérée de la noue possible.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique. Précision : lucarnes sur immeubles collectifs <strong>interdites</strong>.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Lucarnes — Pré aux Saules</td>
+          <td class="td-avant">Lucarne type « double toiture » possible par unité d'habitation. Sans lucarne : 2 châssis de toit max par pan (1 m² chacun). Avec lucarne : 1 seul châssis autorisé par pan.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Châssis sur toitures de garages</td>
+          <td class="td-avant">1 châssis de toit par pan, placé dans l'axe de la baie du garage. Surélévations des toitures de garages interdites.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <!-- 8. ÉLÉMENTS TECHNIQUES -->
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <section class="theme-section" id="t8">
+    <div class="theme-header">
+      <div class="theme-num">8</div>
+      <h2>Éléments techniques</h2>
+    </div>
+    <table>
+      <thead><tr><th>Point réglementaire</th><th>PLU AVANT — Zone UP</th><th>PLUi-HM 2026 — Zone UR</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="td-sujet">Ventilation, climatisation</td>
+          <td class="td-avant">Interdits en toiture ou en applique/saillie de façade. Positionnés derrière un ouvrage intégré.</td>
+          <td class="td-apres"><span class="tag tag-change">Modifié</span><br>Interdits en toiture ou en applique/saillie de façade. <strong>Limités à 2 par unité d'habitation.</strong> Positionnés exclusivement <strong>au sol, contre la façade</strong>, dissimulés derrière un caisson anti-bruit de la teinte de la façade et masqués par un écran végétal.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Panneaux solaires</td>
+          <td class="td-avant">En ligne horizontale au bas de la toiture. Max 5 m² par maison.</td>
+          <td class="td-apres"><span class="tag tag-change">Modifié</span><br>En ligne horizontale au bas de la toiture, <strong>posés au nu de la couverture</strong>. Max 5 m² par maison.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Descentes d'eaux pluviales</td>
+          <td class="td-avant">Cuivre ou acier galvanisé peint brun foncé.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Antennes et paraboles</td>
+          <td class="td-avant">À l'intérieur des bâtiments. En cas d'impossibilité : toiture uniquement, peintes de la teinte de la couverture, petit gabarit.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Conduits de gaz</td>
+          <td class="td-avant">Intérieurs au bâtiment. Constructions neuves : souches maçonnées. Constructions existantes : sorties près du faîtage. Arrivée gaz en logette dans le mur.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Constructions neuves — installations techniques</td>
+          <td class="td-avant">Incorporées dans le volume de la toiture (VMC, ascenseur, clim…). Souches et conduits en partie haute du toit.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Visibilité depuis l'espace public</td>
+          <td class="td-avant">Non précisé explicitement.</td>
+          <td class="td-apres"><span class="tag tag-new">Nouveau</span><br>Les éléments techniques doivent éviter l'effet de superstructures surajoutées et être implantés de façon à <strong>limiter leur visibilité depuis l'espace public</strong>. Les parties sommitales des bâtiments devront être traitées de façon qualitative.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <!-- 9. ANNEXES -->
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <section class="theme-section" id="t9">
+    <div class="theme-header">
+      <div class="theme-num">9</div>
+      <h2>Extensions et constructions secondaires (annexes)</h2>
+    </div>
+    <table>
+      <thead><tr><th>Point réglementaire</th><th>PLU AVANT — Zone UP</th><th>PLUi-HM 2026 — Zone UR</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="td-sujet">Extension en pignon</td>
+          <td class="td-avant">Longueur 5,50 m, profondeur 2,50 m ou 3,60 m selon terrain disponible. Toiture 2 pans asymétriques, pente 20°, hauteur max 4,00 m au faîtage.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Nombre d'annexes — habitat individuel</td>
+          <td class="td-avant">1 local de rangement indépendant (type 1) + 1 local en pignon + 1 annexe de stationnement.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Annexes de stationnement — type 1 (bois)</td>
+          <td class="td-avant">Bois de charpente. Couverture en cuivre ou panneaux photovoltaïques sombres (à l'horizontal) ou végétalisation. Dim. max : 3,60 m × 5,00 m, h 2,30 m. Fermeture partielle sur 2 côtés max (jalousies ajourées bois brun foncé).</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Annexes de stationnement — type 2 (maçonné)</td>
+          <td class="td-avant">Parties maçonnées enduites + parties verticales recouvertes d'un matériau autorisé en toiture. Toiture 20°. Dim. max : 3,60 m × 6,00 m (rangement inclus), h égout 2,30 m.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Local de rangement — type 1 (détaché)</td>
+          <td class="td-avant">Toiture 1 pan 20°. Maçonné ou ossature bois enduit. Long. max 3,20 m. Option 1 : 1 m × h égout 1,80 m / h faîte 2,35 m. Option 2 : 1,50 m × h égout 1,90 m / h faîte 2,65 m. Débord 0,50 m pour bois.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Local de rangement — type 2 (accolé pignon, symétrique)</td>
+          <td class="td-avant">Maçonné ou ossature bois enduit. Pans symétriques 20°. Dim. max : 1,80 m × 5,50 m, h égout 2,40 m.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Local de rangement — type 3 (accolé pignon, asymétrique)</td>
+          <td class="td-avant">Maçonné ou ossature bois enduit dans même finition et teinte que la façade. Pans asymétriques 20°. Dim. max : 1,80 m × 5,50 m, h égout 2,40 m.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Immeubles collectifs</td>
+          <td class="td-avant">Seuls les appentis de rangement type 2 ou 3 en pignon d'immeuble autorisés.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Pré aux Saules — zone A</td>
+          <td class="td-avant">Toute construction devant les constructions principales interdite. 1 seule annexe de rangement type 2 ou 3 accolée en pignon, en retrait de 1 m du plan de façade.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Pré aux Saules — zone B</td>
+          <td class="td-avant">Stationnement : annexe type 1 uniquement, adaptée à la configuration du lot.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Pré aux Saules — côté canal</td>
+          <td class="td-avant">Aucune construction annexe autorisée côté canal, sauf pour constructions disposant de pignon.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <!-- 10. CLÔTURES -->
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <section class="theme-section" id="t10">
+    <div class="theme-header">
+      <div class="theme-num">10</div>
+      <h2>Clôtures, portails et portillons</h2>
+    </div>
+    <table>
+      <thead><tr><th>Point réglementaire</th><th>PLU AVANT — Zone UP</th><th>PLUi-HM 2026 — Zone UR</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="td-sujet">Principe général</td>
+          <td class="td-avant">Concilier pérennité et discrétion. Panneaux occultants, claustra, brise-vue, murs, murets interdits.</td>
+          <td class="td-apres"><span class="tag tag-change">Modifié</span><br>Identique. Ajout : <strong>jardinières ou bacs plantés également interdits</strong>. Portails coulissants ou à 2 vantaux et portillons devront être ajourés. Édification soumise à déclaration préalable.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Côté canal</td>
+          <td class="td-avant">Grillage souple doublé d'une haie, hauteur max 1 m (portillon compris).</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Côté rue et limites séparatives (hors Pré aux Saules)</td>
+          <td class="td-avant">Grillage souple torsadé vert ou gris, hauteur 1,20 m à 1,50 m, doublé d'une haie. Côté canal en limite séparative (sur 2 m à compter de la façade) : hauteur max 1,80 m. Plantations en bac interdites.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Portails — maisons individuelles</td>
+          <td class="td-avant">1 portillon piéton + 1 portail 2 vantaux, palines verticales bois (ou similaire) brun foncé, hauteur 1,20 m à 1,50 m. Portails coulissants interdits sauf maisons individuelles.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Portails — maisons en bande et immeubles</td>
+          <td class="td-avant">1 portillon piéton en lattis bois vertical, barreaudage section carrée ou fer plat, teinte verte, brune ou grise.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Pré aux Saules — clôtures</td>
+          <td class="td-avant">Palines verticales arrondies en partie supérieure, h max 1,60 m, bois brun foncé. Zone A : perception d'espace naturel ouvert à maintenir. Zone B : palines sur traverses horizontales, bois brun foncé, h max 1,60 m.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Haies végétales</td>
+          <td class="td-avant">Non précisé dans le chapitre clôtures.</td>
+          <td class="td-apres"><span class="tag tag-new">Nouveau</span><br>Haies composées d'<strong>essences locales et variées</strong>. Haies monovégétales en mur rideau sur le pourtour des limites parcellaires : <strong>interdites</strong>.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <!-- 11. ESPACES LIBRES -->
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <section class="theme-section" id="t11">
+    <div class="theme-header">
+      <div class="theme-num">11</div>
+      <h2>Espaces libres, plantations et abords</h2>
+    </div>
+    <table>
+      <thead><tr><th>Point réglementaire</th><th>PLU AVANT — Zone UP</th><th>PLUi-HM 2026 — Zone UR</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="td-sujet">Espaces libres côté rue</td>
+          <td class="td-avant">Traités en espaces verts, sauf surface de dallage perméable pour 1 véhicule par unité.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Terrasses côté canal</td>
+          <td class="td-avant">Matériaux perméables obligatoires. Enrobés et béton interdits.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique. Précision : murets délimitant les terrasses constitués d'empilements de pierres sèches, plots ou béton coulé, habillés de bois et recouverts de végétation. Hauteur max <strong>1 m</strong>.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Haies séparatives côté rue</td>
+          <td class="td-avant">Hauteur 1,20 m à 1,80 m. Largeur 1,00 m à 1,50 m. Zone A Pré aux Saules : fermeture en limite séparative interdite.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Remplacement des arbres abattus</td>
+          <td class="td-avant">Tout arbre abattu remplacé par un nouvel arbre d'au moins 3 m de hauteur, sur le même lot.</td>
+          <td class="td-apres"><span class="tag tag-change">Modifié</span><br>Identique. Ajout : <strong>tout abattage devra être justifié par une attestation établie par un professionnel compétent sur l'état sanitaire de l'arbre.</strong></td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Altitude du terrain naturel</td>
+          <td class="td-avant">L'altitude du terrain naturel sera conservée.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Sous-trame littorale</td>
+          <td class="td-avant">Constructions interdites. Défrichement interdit. Essences locales uniquement. Coupes rases limitées.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <!-- 12. STATIONNEMENT -->
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <section class="theme-section" id="t12">
+    <div class="theme-header">
+      <div class="theme-num">12</div>
+      <h2>Stationnement</h2>
+    </div>
+    <table>
+      <thead><tr><th>Point réglementaire</th><th>PLU AVANT — Zone UP</th><th>PLUi-HM 2026 — Zone UR</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="td-sujet">Nombre de places</td>
+          <td class="td-avant">Correspondant aux besoins de l'immeuble à construire.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique. En cas d'extension ou changement de destination : seules les surfaces nouvellement créées sont prises en compte.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Dimensions d'une place</td>
+          <td class="td-avant">Non précisé.</td>
+          <td class="td-apres"><span class="tag tag-new">Nouveau</span><br><strong>5 m × 2,50 m minimum.</strong> Stationnement en enfilade interdit (places accessibles indépendamment).</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Recul / limites séparatives</td>
+          <td class="td-avant">Non précisé dans le règlement Thonon (mais mentionné dans le cahier de prescriptions).</td>
+          <td class="td-apres"><span class="tag tag-new">Nouveau</span><br>Aires de stationnement à l'air libre : recul minimal de <strong>0,75 m</strong> par rapport aux limites séparatives pour permettre une haie de 1,50 m de profondeur.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">1 emplacement couvert par lot</td>
+          <td class="td-avant">1 seul emplacement de stationnement couvert autorisé par lot (sauf Pré aux Saules zone A).</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Alternative en cas d'impossibilité</td>
+          <td class="td-avant">Concession ou acquisition dans un parc public ou privé à moins de 300 m (durée ≥ 15 ans).</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique. Ajout : réduction de 15 % possible en contrepartie de la mise à disposition de véhicules électriques ou propres en auto-partage.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <!-- 13. RÉSEAUX -->
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <section class="theme-section" id="t13">
+    <div class="theme-header">
+      <div class="theme-num">13</div>
+      <h2>Réseaux</h2>
+    </div>
+    <table>
+      <thead><tr><th>Point réglementaire</th><th>PLU AVANT — Zone UP</th><th>PLUi-HM 2026 — Zone UR</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="td-sujet">Eau potable</td>
+          <td class="td-avant">Desserte en eau potable conforme à la réglementation. Déclaration en mairie si ressource propre.</td>
+          <td class="td-apres"><span class="tag tag-change">Modifié</span><br>Idem. Précisions ajoutées : tous forages, captages et prises d'eau autonomes doivent être déclarés en mairie. Défense extérieure contre l'incendie (DECI) : le projet doit répondre aux exigences du RDDECI en vigueur (validation SDIS 74).</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Eaux usées</td>
+          <td class="td-avant">Raccordement au réseau public en séparatif enterré. Raccordement commercial/industriel admis si eaux compatibles.</td>
+          <td class="td-apres"><span class="tag tag-change">Modifié</span><br>Idem. Les eaux usées autres que domestiques seront séparées des eaux domestiques et pluviales, conformément au règlement d'assainissement. En l'absence de réseau collectif : assainissement non collectif conforme aux annexes sanitaires du PLUi-HM.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Eaux pluviales</td>
+          <td class="td-avant">Infiltration privilégiée. En cas de difficulté : rejet réseau public admis après solutions limitatrices.</td>
+          <td class="td-apres"><span class="tag tag-change">Modifié</span><br>Dispositif obligatoire de collecte + rétention + infiltration (ou rejet si sol non perméable). Méthodes alternatives privilégiées (noues, tranchées drainantes, puits d'infiltration…). Aucun rejet d'eau pluviale accepté au réseau d'eaux usées. Prescriptions détaillées dans le règlement de service eaux pluviales (Annexes sanitaires PLUi-HM).</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Réseaux câblés (énergie, télécoms)</td>
+          <td class="td-avant">Réseaux souterrains ou incorporés au bâti. Constructions neuves : dispositifs pour déploiement de la fibre optique.</td>
+          <td class="td-apres"><span class="tag tag-change">Modifié</span><br>Idem. Précision : fourreaux compatibles avec les contraintes techniques de la fibre optique <strong>exigés</strong>.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Accès et voirie</td>
+          <td class="td-avant">Plateforme d'attente minimale de 5 m, pente max 5 %. 1 accès par propriété. Véhicules en marche avant.</td>
+          <td class="td-apres"><span class="tag tag-change">Modifié</span><br>Pente de raccordement ≤ 4 % sur au moins 5 m. 1 accès max par propriété, mutualisation privilégiée. Accès doivent permettre l'intervention des véhicules de secours. Portails implantés sans empiéter sur l'espace public.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Déchets</td>
+          <td class="td-avant">Non réglementé.</td>
+          <td class="td-apres"><span class="tag tag-new">Nouveau</span><br>Toute opération d'aménagement peut se voir imposer un emplacement adapté pour la collecte et le tri des déchets (ordures ménagères, emballages, verre, biodéchets), en accord avec Thonon Agglomération.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <!-- 14. ÉNERGIE -->
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <section class="theme-section" id="t14">
+    <div class="theme-header">
+      <div class="theme-num">14</div>
+      <h2>Performances énergétiques et environnementales</h2>
+    </div>
+    <table>
+      <thead><tr><th>Point réglementaire</th><th>PLU AVANT — Zone UP</th><th>PLUi-HM 2026 — Zone UR</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="td-sujet">Règlementation énergétique</td>
+          <td class="td-avant">Non réglementé.</td>
+          <td class="td-apres"><span class="tag tag-new">Nouveau</span><br>Les nouvelles constructions doivent respecter la <strong>réglementation énergétique en vigueur</strong>. Se reporter à l'OAP thématique « Énergie Climat ».</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Énergies renouvelables — opérations d'habitat ≥ 500 m²</td>
+          <td class="td-avant">Non réglementé.</td>
+          <td class="td-apres"><span class="tag tag-new">Nouveau</span><br>Toute opération d'habitat de surface cumulée ≥ 500 m² doit couvrir au minimum <strong>50 % de son énergie primaire</strong> (ECS + chauffage) par des énergies renouvelables, en privilégiant le solaire pour l'ECS.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Conception bioclimatique</td>
+          <td class="td-avant">Non réglementé.</td>
+          <td class="td-apres"><span class="tag tag-new">Nouveau</span><br>Le projet doit profiter au maximum des caractéristiques bioclimatiques du terrain. Double orientation des logements privilégiée. Organisation des pièces de vie au sud recherchée.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Bonus de constructibilité environnemental</td>
+          <td class="td-avant">Non réglementé.</td>
+          <td class="td-apres"><span class="tag tag-new">Nouveau</span><br>Les constructions vertueuses d'un point de vue environnemental peuvent bénéficier de <strong>+15 % de surface de plancher</strong> supplémentaire. Ce bonus peut atteindre <strong>+30 %</strong> si la construction atteste d'une bonne insertion paysagère.</td>
+        </tr>
+        <tr>
+          <td class="td-sujet">Stores toilés — menuiseries</td>
+          <td class="td-avant">Couleurs brun, rouge, orange (unis). 1 modèle par unité de construction.</td>
+          <td class="td-apres"><span class="tag tag-same">Inchangé</span><br>Identique.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ── AVERTISSEMENT ────────────────────────────────────────────── -->
+  <div class="avertissement">
+    <strong>⚠ Avertissement</strong>
+    Ce document est un résumé comparatif établi à titre informatif par l'APPR. Il ne se substitue pas aux textes officiels. Seuls l'ancien PLU de Thonon-les-Bains (zone UP, révisé 2013, modifié 2019) et le règlement du PLUi-HM approuvé de Thonon Agglomération (zone UR) font foi. Certaines dispositions spécifiques à la presqu'île Le Pré aux Saules (zones A et B) peuvent différer des règles générales ; consultez également les OAP thématiques annexées au PLUi-HM. En cas de projet de travaux, consultez le service urbanisme de la Ville de Thonon-les-Bains ou de Thonon Agglomération.
+  </div>
+
+</main>
+
+<footer>
+  APPR &nbsp;|&nbsp; Document informatif – Mars 2026 &nbsp;|&nbsp; Données issues du PLU de Thonon-les-Bains (2013/2019) et du PLUi-HM de Thonon Agglomération (2026)
+</footer>
+
+</body>
+</html>
